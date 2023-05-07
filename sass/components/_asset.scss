@@ -31,3 +31,40 @@
     border-radius: 4px;
   }
 }
+@media screen and (min-width: $desktop) {
+  .asset-list {
+    padding: 0px 15px;
+    margin: 0px 0px -94px 0px;
+    flex-direction: row;
+
+    &__paragraph-headline {
+      text-align: left;
+    }
+
+    &__icon {
+      width: 270px;
+      height: 120px;
+      padding: 25px 100px 25px 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: $tablet) {
+  .asset-list {
+    flex-wrap: wrap;
+    row-gap: 30px;
+    justify-content: center;
+
+    &__paragraph-text {
+      justify-content: center;
+      text-align: left;
+      width: 354px;
+    }
+
+    &__icon {
+      width: 339px;
+      height: 120px;
+      padding: 25px 130px;
+    }
+  }
+}
