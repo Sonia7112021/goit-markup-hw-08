@@ -13,6 +13,13 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  @media (min-width: 480px) and (max-width: 1200px) {
+    max-width: 480px;
+    max-width: 768px;
+    margin: 0px 15px auto;
+    width: 1200px;
+    margin: 0px auto;
+  }
 }
 
 .flex-wrapper {
@@ -35,34 +42,4 @@ ul {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-}
-// MOBILE
-
-@media screen and (max-width: $mobile) {
-  body {
-    max-width: 480px;
-  }
-  .container {
-    // width: 480px;
-    margin: 0px 15px auto;
-  }
-}
-
-// TABLET
-
-@media screen and (min-width: 481px) and (max-width: $tablet) {
-  body {
-    max-width: 768px;
-  }
-  .container {
-    // width: 768px;
-    margin: 0px 15px auto;
-  }
-}
-
-@media screen and (min-width: $desktop) {
-  .container {
-    width: 1200px;
-    margin: 0px auto;
-  }
 }
