@@ -13,8 +13,9 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  @media (min-width: 480px) and (max-width: 768px) and (max-width: 1200px) {
+  @media screen and (min-width: 480px) {
     margin: 0px auto;
+    background-color: red;
   }
 }
 
