@@ -13,11 +13,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  @media (min-width: 480px) and (max-width: 1200px) {
-    max-width: 480px;
-    max-width: 768px;
-    margin: 0px 15px auto;
-    width: 1200px;
+  @media (min-width: 480px) and (max-width: 768px) and (max-width: 1200px) {
     margin: 0px auto;
   }
 }
@@ -42,4 +38,8 @@ ul {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  @media (min-width: 480px) and (max-width: 768px) and (max-width: 1200px) {
+    display: none;
+    justify-content: center;
+  }
 }
