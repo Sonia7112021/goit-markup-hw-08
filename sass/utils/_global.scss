@@ -13,10 +13,6 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  @media screen and (min-width: 480px) {
-    margin: 0px auto;
-    background-color: red;
-  }
 }
 
 .flex-wrapper {
@@ -39,8 +35,32 @@ ul {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  @media (min-width: 480px) and (max-width: 768px) and (max-width: 1200px) {
-    display: none;
-    justify-content: center;
+}
+
+// MOBILE
+
+@media screen and (max-width: 480px) {
+  body {
+    max-width: 480px;
+  }
+  .container {
+    // width: 480px;
+    margin: 0px 15px auto;
+  }
+}
+
+// TABLET
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    margin: 0px 15px auto;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 0px auto;
   }
 }

@@ -10,7 +10,9 @@
 @import "./components/modal";
 @import "./components/portfolio-filters";
 @import "./components/portfolio-projects";
-@import "./components/global";
+@import "./components/mobile-menu";
+@import "./utils/global";
+@import "./utils/variables";
 
 * {
   margin: 0px;

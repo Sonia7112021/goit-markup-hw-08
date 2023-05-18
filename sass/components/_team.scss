@@ -69,3 +69,32 @@
     fill: white;
   }
 }
+@media screen and (min-width: $mobile) and (max-width: 1200px) {
+  .team-list {
+    flex-direction: column;
+  }
+}
+
+// @media screen and (min-width: $tablet) and (max-width: 1199px){
+
+// .team-list {
+//     flex-wrap: wrap;
+
+//     &__item-box{
+//       width: calc((100% - 30px)/2);
+//     }
+
+// .team-details{
+
+//   &__name{
+//     text-align: left;
+//     margin-left: 141px;
+
+//   }
+//   &__position{
+//     text-align: left;
+//     margin-left: 112px;
+//   }
+// }
+
+// }

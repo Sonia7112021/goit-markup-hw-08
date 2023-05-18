@@ -23,3 +23,29 @@
     }
   }
 }
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .client-list {
+    flex-wrap: wrap;
+
+    &__border {
+      width: 226px;
+      height: 92px;
+    }
+
+    &-icon {
+      max-width: 226px;
+      max-height: 92px;
+      padding: 16px 60px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .client-list__border {
+    width: 170px;
+  }
+
+  .client-list-icon {
+    padding: 17.71px 32px 14.25px;
+  }
+}
