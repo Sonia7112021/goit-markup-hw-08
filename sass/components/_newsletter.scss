@@ -3,6 +3,12 @@
   flex-direction: column;
   margin: 72px 0px 0px 78px;
   cursor: pointer;
+  @media screen and (min-width: $mobile) and (max-width: 1200px) {
+    display: block;
+    justify-content: center;
+    padding: auto;
+    margin-top: auto;
+  }
 
   &-form {
     margin-top: 20px;
