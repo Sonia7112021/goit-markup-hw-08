@@ -2,7 +2,13 @@
   display: flex;
   gap: 30px;
   margin-top: 50px;
-
+  @media screen and (min-width: $mobile) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: auto;
+    margin-left: 30px;
+    padding: 17.71px 32px 14.25px;
+  }
   &__border {
     border: solid $iconColor 1px;
     border-radius: 4px;

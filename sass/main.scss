@@ -28,6 +28,7 @@ body {
 img {
   display: block;
   font-size: 0;
+  margin-inline: auto;
 }
 ul {
   list-style-type: none;
@@ -36,6 +37,5 @@ ul {
   padding: 94px 0px;
 }
 .container {
-  width: 1200px;
   margin: 0px auto;
 }

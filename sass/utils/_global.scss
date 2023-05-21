@@ -42,6 +42,7 @@ ul {
 @media screen and (max-width: 480px) {
   body {
     max-width: 480px;
+    background-color: green;
   }
   .container {
     // width: 480px;
@@ -52,10 +53,13 @@ ul {
 // TABLET
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .container {
-    margin: 0px 15px auto;
-    margin-left: 15px;
+  .body {
+    background-color: yellow;
   }
+}
+.container {
+  margin: 0px 15px auto;
+  margin-left: 15px;
 }
 
 @media screen and (min-width: 1200px) {
