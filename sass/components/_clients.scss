@@ -1,57 +1,117 @@
+// .client-list {
+//   display: flex;
+//   gap: 30px;
+//   margin-top: 50px;
+//   @media screen and (min-width: $mobile) {
+//     flex-wrap: wrap;
+//     flex-direction: row;
+//     margin-top: auto;
+//     margin-left: 30px;
+//     padding: 17.71px 32px 14.25px;
+//   }
+//   &__border {
+//     border: solid $iconColor 1px;
+//     border-radius: 4px;
+//     cursor: pointer;
+
+//     &:hover,
+//     &:focus {
+//       border-color: $hoverColor;
+//     }
+//   }
+//   .client-list-icon {
+//     fill: $iconColor;
+//     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//     &:hover,
+//     &:focus {
+//       fill: $hoverColor;
+//     }
+//   }
+// }
+// @media screen and (min-width: $tablet) and (max-width: 1199px) {
+//   .client-list {
+//     flex-wrap: wrap;
+
+//     &__border {
+//       width: 226px;
+//       height: 92px;
+//     }
+
+//     &-icon {
+//       max-width: 226px;
+//       max-height: 92px;
+//       padding: 16px 60px;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: $desktop) {
+//   .client-list__border {
+//     width: 170px;
+//   }
+
+//   .client-list-icon {
+//     padding: 17.71px 32px 14.25px;
+//   }
+// }
+
 .client-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  margin-top: 50px;
-  @media screen and (min-width: $mobile) {
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-top: auto;
-    margin-left: 30px;
-    padding: 17.71px 32px 14.25px;
-  }
+  justify-content: center;
+  align-items: center;
+  margin: 50px 15px 0px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 689px;
+
   &__border {
     border: solid $iconColor 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 4px;
     cursor: pointer;
+    width: 210px;
+    height: 92px;
+    display: flex;
+    fill: $iconColor;
 
     &:hover,
     &:focus {
       border-color: $hoverColor;
+      fill: $hoverColor;
+      outline: none;
     }
   }
-  .client-list-icon {
-    fill: $iconColor;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover,
-    &:focus {
-      fill: $hoverColor;
-    }
+  &-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
+@media screen and (min-width: $desktop) {
+  .client-list {
+    margin: 0px;
+    margin-top: 50px;
+    max-width: none;
+  }
+  .client-list__border {
+    width: 170px;
+  }
+}
+
 @media screen and (min-width: $tablet) and (max-width: 1199px) {
   .client-list {
     flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 900px;
 
     &__border {
       width: 226px;
       height: 92px;
     }
-
-    &-icon {
-      max-width: 226px;
-      max-height: 92px;
-      padding: 16px 60px;
-    }
-  }
-}
-
-@media screen and (min-width: $desktop) {
-  .client-list__border {
-    width: 170px;
-  }
-
-  .client-list-icon {
-    padding: 17.71px 32px 14.25px;
   }
 }

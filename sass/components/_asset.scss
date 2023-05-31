@@ -1,39 +1,154 @@
-@media screen and (min-width: $mobile) {
-  .asset-list {
-    display: flex;
-    padding: 0px;
-    flex-direction: column;
-    margin: -30px 0px -94px 0px;
+//   //  @media screen and (min-width: $mobile) {
+//   .asset-list {
+//     display: flex;
+//     padding: 0px;
+//     flex-direction: column;
+//     margin: -30px 0px -94px 0px;
 
-    &__paragraph-headline {
-      justify-content: center;
-      text-align: center;
-      color: $fontColor;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 1.17;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 10px;
-    }
+//     &__paragraph-headline {
+//       justify-content: center;
+//       text-align: center;
+//       color: $fontColor;
+//       font-weight: 700;
+//       font-size: 14px;
+//       line-height: 1.17;
+//       letter-spacing: 0.03em;
+//       text-transform: uppercase;
+//       display: block;
+//       margin-bottom: 10px;
+//     }
+
+//     &__paragraph-text {
+//       font-size: 14px;
+//       line-height: 1.71;
+//       text-align: left;
+//       color: $nrColor;
+//       margin-bottom: 30px;
+//     }
+
+//     &__icon {
+//       display: flex;
+//       width: 450px;
+//       height: 120px;
+//       padding: 25px 190px;
+//       background-color: $teamBgColor;
+//       margin-bottom: 30px;
+//       border-radius: 4px;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: $desktop) {
+//   .asset-list {
+//     padding: 0px 15px;
+//     margin: 0px 0px -94px 0px;
+//     flex-direction: row;
+
+//     &__paragraph-headline {
+//       text-align: left;
+//     }
+
+//     &__icon {
+//       width: 270px;
+//       height: 120px;
+//       padding: 25px 100px 25px 100px;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: $tablet) and (max-width: 1199px) {
+//   .asset-list {
+//     flex-wrap: wrap;
+//     row-gap: 30px;
+//     justify-content: center;
+
+//     &__paragraph-text {
+//       justify-content: center;
+//       text-align: left;
+//       width: 354px;
+//     }
+
+//     &__icon {
+//       width: 339px;
+//       height: 120px;
+//       padding: 25px 130px;
+//     }
+//   }
+// }
+// //
+
+.asset-list {
+  display: flex;
+  padding: 0px;
+  flex-direction: column;
+  margin: -30px 0px -50px 0px;
+
+  &__paragraph-headline {
+    justify-content: center;
+    text-align: center;
+    color: $fontColor;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__paragraph-text {
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: left;
+    color: $nrColor;
+    margin-bottom: 30px;
+    width: 450px;
+  }
+
+  &__icon {
+    display: flex;
+    width: 450px;
+    height: 120px;
+    padding: 25px 190px;
+    background-color: $teamBgColor;
+    margin-bottom: 30px;
+    border-radius: 4px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .asset-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 15px -15px 15px;
+    gap: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 
     &__paragraph-text {
-      font-size: 14px;
-      line-height: 1.71;
-      text-align: left;
-      color: $nrColor;
-      margin-bottom: 30px;
+      width: 354px;
+      margin-bottom: 0px;
     }
 
     &__icon {
-      display: flex;
-      width: 450px;
+      width: 354px;
       height: 120px;
-      padding: 25px 190px;
-      background-color: $teamBgColor;
-      margin-bottom: 30px;
-      border-radius: 4px;
+      padding: 25px 130px;
+    }
+
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
     }
   }
 }
@@ -46,6 +161,11 @@
 
     &__paragraph-headline {
       text-align: left;
+      justify-content: left;
+    }
+
+    &__paragraph-text {
+      width: auto;
     }
 
     &__icon {
@@ -53,25 +173,9 @@
       height: 120px;
       padding: 25px 100px 25px 100px;
     }
-  }
-}
 
-@media screen and (min-width: $tablet) and (max-width: 1199px) {
-  .asset-list {
-    flex-wrap: wrap;
-    row-gap: 30px;
-    justify-content: center;
-
-    &__paragraph-text {
-      justify-content: center;
-      text-align: left;
-      width: 354px;
-    }
-
-    &__icon {
-      width: 339px;
-      height: 120px;
-      padding: 25px 130px;
+    &__item {
+      align-items: flex-start;
     }
   }
 }

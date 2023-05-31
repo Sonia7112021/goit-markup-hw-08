@@ -1,82 +1,218 @@
-.service-list {
-  display: flex;
-  gap: 30px;
-  margin-top: 50px;
-  padding: 0px 15px;
+// .service-list {
+//   display: flex;
+//   gap: 30px;
+//   margin-top: 50px;
+//   padding: 0px 15px;
 
-  &__overlay-text {
-    position: absolute;
-    color: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
-  }
-  &__overlay-box {
-    position: relative;
-    width: 370px;
-    height: 70px;
-    bottom: 70px;
-    background: rgba(47, 48, 58, 0.8);
-  }
+//   &__overlay-text {
+//     position: absolute;
+//     color: #fff;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     text-transform: uppercase;
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     text-align: center;
+//     letter-spacing: 0.03em;
+//   }
+//   &__overlay-box {
+//     position: relative;
+//     width: 370px;
+//     height: 70px;
+//     bottom: 70px;
+//     background: rgba(47, 48, 58, 0.8);
+//   }
+// }
+
+// @media screen and (max-width: 480px) {
+//   .service-list {
+//     position: absolute;
+//     visibility: hidden;
+
+//     &__overlay-text {
+//       position: absolute;
+//       visibility: hidden;
+//     }
+//     &__overlay-box {
+//       position: absolute;
+//       visibility: hidden;
+//     }
+//   }
+// }
+
+// .service-list {
+//   display: flex;
+//   gap: 30px;
+//   margin-top: 50px;
+//   padding: 0px 15px;
+
+//   &__overlay-text {
+//     position: absolute;
+//     color: #fff;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     text-transform: uppercase;
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     text-align: center;
+//     letter-spacing: 0.03em;
+//   }
+//   &__overlay-box {
+//     position: relative;
+//     width: 370px;
+//     height: 70px;
+//     bottom: 70px;
+//     background: rgba(47, 48, 58, 0.8);
+//   }
+// }
+
+// @media screen and (min-width: 481px) and (max-width: $tablet) {
+//   .service-list {
+//     visibility: hidden;
+//     display: none;
+//   }
+//   .page__section-header--hidden {
+//     visibility: hidden;
+//     display: none;
+//   }
+// }
+
+.page--color {
+  background-color: white;
 }
 
-@media screen and (max-width: 480px) {
-  .service-list {
-    position: absolute;
-    visibility: hidden;
+.page__image {
+  width: 100%;
+  height: auto;
+  background-image: url(../images/background_mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 100% auto;
 
-    &__overlay-text {
-      position: absolute;
-      visibility: hidden;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .page__image {
+      background-image: url(../images/background_mobile2x.jpg);
     }
-    &__overlay-box {
-      position: absolute;
-      visibility: hidden;
-    }
   }
-}
 
-.service-list {
-  display: flex;
-  gap: 30px;
-  margin-top: 50px;
-  padding: 0px 15px;
+  &--overlay {
+    background: rgba(47, 48, 58, 0.4);
+    display: block;
+    width: 100%;
+    height: 400px;
+  }
 
-  &__overlay-text {
-    position: absolute;
-    color: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+  &-text {
+    font-size: 26px;
+    line-height: 1.61;
+    margin: 24px 43px 30px 42px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
     text-align: center;
-    letter-spacing: 0.03em;
-  }
-  &__overlay-box {
-    position: relative;
-    width: 370px;
-    height: 70px;
-    bottom: 70px;
-    background: rgba(47, 48, 58, 0.8);
+    text-transform: uppercase;
+    color: white;
+    width: 395px;
   }
 }
+.page__image--pos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-@media screen and (min-width: 481px) and (max-width: $tablet) {
-  .service-list {
+.page__btn {
+  color: white;
+  background-color: $hoverColor;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 41px 10px 42px;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__section-header {
+  color: $fontColor;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  &--hidden {
     visibility: hidden;
     display: none;
   }
-  .page__section-header--hidden {
-    visibility: hidden;
-    display: none;
+}
+
+@media screen and (min-width: $desktop) {
+  .page__image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/background_desktop.jpg);
+    background-size: cover;
+    min-height: 600px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .page__image {
+        background-image: url(../images/background_desktop2x.jpg);
+      }
+    }
+
+    &--overlay {
+      height: 600px;
+    }
+
+    &-text {
+      font-size: 44px;
+      line-height: 1.36;
+      margin: 106px 252px 30px 252px;
+      width: auto;
+    }
+  }
+}
+
+.page__section-header--hidden {
+  visibility: visible;
+  display: block;
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .page__image {
+    background-image: url(../images/background_tablet.jpg);
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+
+    &--overlay {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .page__image {
+      background-image: url(../images/background_tablet2x.jpg);
+      background-size: cover;
+    }
   }
 }
